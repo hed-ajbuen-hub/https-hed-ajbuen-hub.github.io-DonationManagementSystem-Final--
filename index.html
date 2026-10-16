@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="donors">
+
+    <header class="navbar">
+        <h2>Donation Management System</h2>
+        <nav>
+            <a href="index.html" class="active">Donors</a>
+            <a href="Campaigns.html">Campaigns</a>
+            <a href="donations.html">Donations</a>
+            <a href="beneficiaries.html">Beneficiaries</a>
+        </nav>
+        <div class="session-controls" data-session-controls></div>
+    </header>
+
+    <div class="container">
+        <!-- Form Section -->
+        <div class="card">
+            <h3>Add New Donor</h3>
+            <form id="record-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. Juan Dela Cruz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. juan@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="e.g. 09123456789">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter home address"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Save Donor</button>
+            </form>
+        </div>
+
+        <!-- Table Section -->
+        <div class="card">
+            <h3>Registered Donors List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody id="records-table"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="api-config.js"></script>
+    <script src="app.js" defer></script>
+</body>
+</html>

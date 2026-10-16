@@ -1,0 +1,5 @@
+node_modules/
+.donations.sqlite
+.donations.sqlite-shm
+.donations.sqlite-wal
+.user-recovery-key

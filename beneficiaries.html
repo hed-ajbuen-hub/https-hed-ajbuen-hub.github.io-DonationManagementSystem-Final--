@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficiaries - Donation Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="beneficiaries">
+
+    <header class="navbar">
+        <h2>Donation Management System</h2>
+        <nav>
+            <a href="index.html">Donors</a>
+            <a href="Campaigns.html">Campaigns</a>
+            <a href="donations.html">Donations</a>
+            <a href="beneficiaries.html" class="active">Beneficiaries</a>
+        </nav>
+        <div class="session-controls" data-session-controls></div>
+    </header>
+
+    <div class="container">
+        <!-- Form Section -->
+        <div class="card" data-admin-only>
+            <h3>Add Beneficiary</h3>
+            <form id="record-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. Ana Cruz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="classification">Classification / Category</label>
+                    <input type="text" id="classification" name="classification" placeholder="e.g. Senior Citizen, Student, Calamity Victim">
+                </div>
+
+                <div class="form-group">
+                    <label for="eligibilityStatus">Eligibility Status</label>
+                    <select id="eligibilityStatus" name="eligibilityStatus">
+                        <option value="Eligible">Eligible</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Ineligible">Ineligible</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Save Beneficiary</button>
+            </form>
+        </div>
+
+        <!-- Table Section -->
+        <div class="card">
+            <h3>Beneficiaries List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Classification</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="records-table"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="api-config.js"></script>
+    <script src="app.js" defer></script>
+</body>
+</html>

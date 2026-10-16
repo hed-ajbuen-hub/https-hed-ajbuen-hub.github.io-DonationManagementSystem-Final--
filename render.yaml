@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: donation-management-system
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: USER_USERNAME
+        value: donation_user
+      - key: USER_PASSWORD
+        value: GiveWithCare2026!
+      - key: USER_RESET_CODE
+        generateValue: true
