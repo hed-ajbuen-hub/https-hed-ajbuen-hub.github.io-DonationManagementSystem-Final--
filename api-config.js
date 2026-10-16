@@ -1,4 +1,4 @@
-window.DONATION_API_URL = "";
+window.DONATION_API_URL = "https://httpshedajbuenhubgithubiodonationmanagementsystemfinal-fx05jihm.b4a.run/";
 
 (() => {
     const apiBaseUrl = String(window.DONATION_API_URL || "").trim().replace(/\/+$/, "");
